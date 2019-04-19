@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caves of Purgatory</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/UI.css">
+    <link rel="stylesheet" type="text/css" href="css/CreationPages.css">
+    <link rel="stylesheet" type="text/css" href="css/GameWindow.css">
+</head>
 
+<body>
+
+   <button id="testButton">x</button>
+   
+    <section class="fullPage" id="creation1">
+        <span class="gameTitle">Caves of Purgatory</span>
+        <div class="fullPageContainer">
+            <input type="text" id="insertName" placeholder="Your name..."></label>
+            <button name="next" id="creationButton1">Next step</button>
+        </div>
+    </section>
+
+    <section class="fullPage" id="creation2">
+        <div class="fullPageContainer" id="classes">
+
+            <div class="classContainer" id="rogueContainer">
+                <h1>Rogue</h1>
+                <img src="images/rogueIcon.png">
+            </div>
+
+            <div class="classContainer" id="mysticContainer">
+                <h1>Mystic</h1>
+                <img src="images/mysticIcon.png">
+            </div>
+
+            <div class="classContainer" id="slayerContainer">
+                <h1>Slayer</h1>
+                <img src="images/slayerIcon.png">
+            </div>
+
+            <div class="classContainer" id="abbotContainer">
+                <h1>Abbot</h1>
+                <img src="images/abbotIcon.png">
+            </div>
+
+            <div class="classContainer" id="asherContainer">
+                <h1>Asher</h1>
+                <img src="images/asherIcon.png">
+            </div>
+
+            <div class="classContainer" id="alchemistContainer">
+                <h1>Alchemist</h1>
+                <img src="images/alchemistIcon.png">
+            </div>
+            <button name="next" id="creationButton2">Next step</button>
+        </div>
+    </section>
+    
+    <section class="gameWindow" id="cityWindow">
+        <img src="images/city.png">
+        <button class="mapButtons" id="dungeonButton">dungeon</button>
+        <button class="mapButtons" id="barracksButton">barracks</button>
+        <button class="mapButtons" id="academyButton">academy</button>
+        <button class="mapButtons" id="magicshopButton">magic shop</button>
+        <button class="mapButtons" id="smithyButton">smithy</button>
+    </section>
+    
+    <section class="gameWindow" id="magicshopWindow">
+        magic shop
+    </section>
+    
+    <section class="gameWindow" id="barracksWindow">
+        barracks
+    </section>
+    
+    <section class="gameWindow" id="academyWindow">
+        academy
+    </section>
+    
+    <section class="gameWindow" id="smithyWindow">
+        smithy
+    </section>
+
+    <section class="gameWindow" id="dungeonWindow">
+        dungeon
+    </section>
+    
+    
+    
+    <div class="smallWindow" id="skillTreeWindow">
+        skill tree
+    </div>
+    
+    <div class="smallWindow" id="skillBookWindow">
+        skill book
+    </div>
+    
+    <div class="smallWindow" id="alchemyWindow">
+        alchemy
+    </div>
+
+    <section class="topPanel">
+        <button id="skillTreeWindowButton">Skill Tree</button>
+        <button id="skillBookWindowButton">Skill Book</button>
+        <button id="alchemyWindowButton">Alchemy</button>
+        <button id="backToCityButton">Map</button>
+    </section>
+   
+    <section class="leftPanel">
+
+        <button id="statsWindowButton">stats</button>
+        <button id="emptyWindow1Button">ew1</button>
+        <button id="emptyWindow2Button">ew2</button>
+        <button id="emptyWindow3Button">ew3</button>
+
+        <div class="leftPanelWindow" id="statsWindow">
+            <span class="statsText" id="LVLstat">lvl</span>
+            <span class="statsText" id="EXPstat">exp</span>
+            <br>
+            <span class="statsText" id="HPstat">hp</span>
+            <span class="statsText" id="MPstat">xx</span>
+            <span class="statsText" id="EPstat">xx</span>
+            <br>
+            <span class="statsText" id="STRstat">xx</span>
+            <span class="statsText" id="AGLstat">xx</span>
+            <span class="statsText" id="INTstat">xx</span>
+        </div>
+        <div class="leftPanelWindow" id="emptyWindow1">ew1</div>
+        <div class="leftPanelWindow" id="emptyWindow2">ew2</div>
+        <div class="leftPanelWindow" id="emptyWindow3">ew3</div>
+
+
+    </section>
+
+    <section class="rightPanel">
+
+        <div id="heroSection">
+            <div id="Name"><span id="heroNameDisplay">Pawełek</span></div>
+            <div class="bar"><span class="barText" id="EXPbarText">Lvl 1 (0/10)</span>
+                <div id="EXPbar"></div>
+            </div>
+            <div class="bar"><span class="barText" id="HPbarText">HP 100% (100/100)</span>
+                <div id="HPbar"></div>
+            </div>
+            <div class="bar"><span class="barText" id="MPbarText">MP 100% (100/100)</span>
+                <div id="MPbar"></div>
+            </div>
+            <div class="bar"><span class="barText" id="EPbarText">EP 100% (100/100)</span>
+                <div id="EPbar"></div>
+            </div>
+        </div>
+
+        <div id="equipmentSection">
+            <img src="images/eqBg.jpg">
+            <div class="equipmentSlot" id="headSlot"></div>
+            <div class="equipmentSlot" id="bodySlot"></div>
+            <div class="equipmentSlot" id="legsSlot"></div>
+            <div class="equipmentSlot" id="bootsSlot"></div>
+            <div class="equipmentSlot" id="mainHandSlot"></div>
+            <div class="equipmentSlot" id="offHandSlot"></div>
+            <div class="equipmentSlot" id="ring1Slot"></div>
+            <div class="equipmentSlot" id="ring2Slot"></div>
+            <div class="equipmentSlot" id="amuletSlot"></div>
+        </div>
+
+        <div id="inventorySection">
+            <div class="inventorySlot" id="inventorySlot0"></div>
+            <div class="inventorySlot" id="inventorySlot1"></div>
+            <div class="inventorySlot" id="inventorySlot2"></div>
+            <div class="inventorySlot" id="inventorySlot3"></div>
+            <div class="inventorySlot" id="inventorySlot4"></div>
+            <div class="inventorySlot" id="inventorySlot5"></div>
+            <div class="inventorySlot" id="inventorySlot6"></div>
+            <div class="inventorySlot" id="inventorySlot7"></div>
+            <div class="inventorySlot" id="inventorySlot8"></div>
+            <div class="inventorySlot" id="inventorySlot9"></div>
+            <div class="inventorySlot" id="inventorySlot10"></div>
+            <div class="inventorySlot" id="inventorySlot11"></div>
+            <div class="inventorySlot" id="inventorySlot12"></div>
+            <div class="inventorySlot" id="inventorySlot13"></div>
+            <div class="inventorySlot" id="inventorySlot14"></div>
+            <div class="inventorySlot" id="inventorySlot15"></div>
+            <div class="inventorySlot" id="inventorySlot16"></div>
+            <div class="inventorySlot" id="inventorySlot17"></div>
+            <div class="inventorySlot" id="inventorySlot18"></div>
+            <div class="inventorySlot" id="inventorySlot19"></div>
+            <div class="inventorySlot" id="inventorySlot20"></div>
+            <div class="inventorySlot" id="inventorySlot21"></div>
+            <div class="inventorySlot" id="inventorySlot22"></div>
+            <div class="inventorySlot" id="inventorySlot23"></div>
+            <div class="inventorySlot" id="inventorySlot24"></div>
+        </div>
+
+    </section>
+
+    <script src="js/Hero.js"></script>
+    <script src="js/HeroStatistics.js"></script>
+    <script src="js/CharacterCreation.js"></script>
+    <script src="js/Classes.js"></script>
+    <script src="js/SwappingWindows.js"></script>
+    <script src="js/GameUpdate.js"></script>
+    <script src="js/Items.js"></script>
+    <script src="js/Inventory.js"></script>
+    <script src="js/test.js"></script>
+    <script src="js/Game.js"></script>
+</body>
+</html>

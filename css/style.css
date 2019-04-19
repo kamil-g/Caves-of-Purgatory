@@ -1,0 +1,31 @@
+    
+@font-face 
+{
+    font-family: MainFont;
+    src: url("other/mainFont.ttf")
+}
+
+body, html
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #141212;
+    font-family: MainFont;
+    background-image: url("../images/verticalFrame.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 63% 100%;
+}
+
+#testButton
+{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    z-index: 999;
+}

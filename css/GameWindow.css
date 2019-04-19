@@ -1,0 +1,81 @@
+.gameWindow
+{
+    background-color: black;
+    width: 60vw;
+    height: 60vh;
+    position: absolute;
+    display: block;
+    left: 20vw;
+    top: 20vh;
+    color: yellow;
+}
+
+#cityWindow img
+{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+#cityWindow button
+{
+    position: absolute;
+    width: 14%;
+    height: 7%;
+}
+
+#academyButton
+{
+    top: 1%;
+    right: 38%;
+}
+
+#magicshopButton
+{
+    top: 65%;
+    right: 25%;
+}
+
+#barracksButton
+{
+    top: 55%;
+    left: 13%;
+}
+
+#smithyButton
+{
+    top: 12%;
+    left: 25%;
+}
+
+#dungeonButton
+{
+    top: 25%;
+    right: 10%;
+}
+
+#academyWindow
+{
+    display: none;
+}
+
+#magicshopWindow
+{
+    display: none;
+}
+
+#barracksWindow
+{
+    display: none;
+}
+
+#smithyWindow
+{
+    display: none;
+}
+
+#dungeonWindow
+{
+    display: none;
+}
+

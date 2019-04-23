@@ -1,4 +1,4 @@
-//do refakturyzacji !!! wszystko 
+//do refaktoryzacji !!! wszystko 
 
 let bonusHP = 0,
     bonusMP = 0,

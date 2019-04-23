@@ -64,14 +64,6 @@ function eqUpdate(){
     //console.log("eq updated");
 };
 
-//test button
-document.querySelector("#testButton").addEventListener("click", function(){
-   addItem(testSword); 
-   addItem(testArmor); 
-   addItem(testBucket); 
-   console.log("bonus hp: " + bonusStats[0] + "bonus mp: " + bonusStats[1] + "bonus ep: " + bonusStats[2]);
-});
-
 //adding new items to inventory
 function addItem(newItem)
 {   

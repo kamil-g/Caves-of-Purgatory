@@ -139,13 +139,23 @@
 
 .area
 {
-    background: red;
     margin: 2px;
     display: block;
     width: 100%;
     height: 100%;
+    position: relative;
+    top: 50%;
 }
 
+#playerArea
+{
+    position: relative;
+    bottom: -150%;
+    left: 150%;
+    right: 40%;
+    width: 100%;
+    height: 100%;
+}
 
 
 

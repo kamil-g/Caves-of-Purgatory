@@ -70,6 +70,7 @@ function otherItem(id, icon, name, type, price){
 const testSword = new weapon(0, "images/testSword.png", "Test Sword", "1h", 100, 10, 10, 0, 0, 5, 0, 0, "normal");
 const testArmor = new armor(0, "images/testArmor.png", "Test Armor", "body", 100, 25, 0, 10, 10, 0, 0, 50, "normal");
 const testBucket = new otherItem(0, "images/testBucket.png", "Bucket", "", 100);
+const testRing = new accessory(0, "images/testRing.png", "Bucket", "ring", 100, 5, 5, 5, 5, 5, 5, 5, "normal");
 
 
 

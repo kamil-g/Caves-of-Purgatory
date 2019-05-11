@@ -54,15 +54,57 @@ document.querySelector("#goRight3").addEventListener("click", function(){
 
 //fight starting
 function startFight(x)
-{
+{   
     document.querySelector("#cave1").style.display = "none";
     document.querySelector("#cave2").style.display = "none";
     document.querySelector("#cave3").style.display = "none";
     document.querySelector("#fightCave").style.display = "grid";
     
     inDungeon = true;
+    setEnemyQty();
     console.log("went " + x);
 }
+
+//setting quantity of enemies
+function setEnemyQty()
+{
+    let enemyQty = Math.random() * 4;; 
+
+    if (enemyQty < 1)
+        enemyQty = 0;
+    else if (enemyQty >= 1 && enemyQty < 2)
+        enemyQty = 1;
+    else if (enemyQty >= 2 && enemyQty < 3)
+        enemyQty = 2;
+    else
+        enemyQty = 3;
+    
+    console.log("enemyQTY: " + enemyQty);
+}
+
+//enemy slots when fighting
+let eFields = [
+    document.querySelector("#area0"),
+    document.querySelector("#area1"),
+    document.querySelector("#area2"),
+    document.querySelector("#area3")
+];
+
+function enemySlot(slot, enemy){
+    this.slot = slot;
+    this.enemy = enemy;
+};
+
+let eSlots = [];
+for(let i = 0; i <= 3; i++){
+    eSlots.push(new enemySlot(eFields[i], null));
+} 
+
+//test interval
+setInterval(function(){
+    eSlots[0].enemy = rat;
+    eSlots[0].slot.innerHTML = eSlots[0].enemy.name;
+},1);
 
 
 

@@ -66,12 +66,12 @@ function eqUpdate(){
 
 //adding new items to inventory
 function addItem(newItem)
-{   
+{
     for(let i = 0; i <= 24; i++){
         if(iSlots[i].item == null)
             {
-                iSlots[i].item = newItem;
-                    eqUpdate();
+                iSlots[i].item = newItem;  
+                eqUpdate();
                 break;
             }
     }
@@ -107,6 +107,7 @@ function clearSlot(slotID)
 function equipItem(slotID)
 {
     let equipped = false;
+    let ringsFull = false;
     
     if(slotID.item == otherItem || slotID.item == potion)
     {
@@ -116,8 +117,7 @@ function equipItem(slotID)
     {      
         if(slotID.item.type == "1h" && mainHand.item == null)
         {
-            mainHand.item = slotID.item;
-            
+            mainHand.item = slotID.item; 
         }
         else if(slotID.item.type == "2h" && offHand.item == null && mainHand == null)
         {
@@ -134,10 +134,14 @@ function equipItem(slotID)
         }
         else if(slotID.item.type == "ring")
         {
-            if(ring1.item == null)
+            if(ring1.item == null && ring2.item == null)
                 ring1.item = slotID.item;
-            else if(ring2.item == null)
-                ring2.item = slotID.item;
+            else if(ring1.item != null && ring2.item == null)
+                ring2.item = slotID.item;   
+            else if(ring1.item == null && ring2.item != null)
+                ring1.item = slotID.item;
+            else if(ring1.item != null && ring2.item != null)
+                ringsFull = true;
         }
         else if(slotID.item.type == "amulet" && amulet.item == null)
         {
@@ -151,7 +155,12 @@ function equipItem(slotID)
     }
     if(equipped == false)
     {
-        clearSlot(slotID);
+        if(ringsFull == false)
+            {
+                clearSlot(slotID); 
+            }
+        else
+            ringsFull = false;
     }
     equipped = false;
 };
@@ -167,10 +176,18 @@ for(let i = 0; i <= 8; i++)
 //unequipping items
 function unequip(eqSlot)
 {
-    addItem(eqSlot.item);
-    eqSlot.item = null; 
-    eqSlot.slot.style.backgroundImage = "";
-    eqSlot.slot.innerHTML = "";
+    for(let i = 0; i <= 24; i++){
+        if(iSlots[i].item == null)
+            {
+                addItem(eqSlot.item);
+                eqSlot.item = null; 
+                eqSlot.slot.style.backgroundImage = "";
+                eqSlot.slot.innerHTML = "";
+                break;
+            }
+        else
+            console.log("no place");
+    }
 };
 
 

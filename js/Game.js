@@ -78,8 +78,8 @@ function setEnemyQty()
         enemyQty = 2;
     else
         enemyQty = 3;
-    
-    console.log("enemyQTY: " + enemyQty);
+    spawnEnemy(enemyQty)
+    console.log("enemyQTY: " + (enemyQty + 1));
 }
 
 //enemy slots when fighting
@@ -100,13 +100,24 @@ for(let i = 0; i <= 3; i++){
     eSlots.push(new enemySlot(eFields[i], null));
 } 
 
+function spawnEnemy(qty)
+{
+    for (let i = 0; i <= qty; i++)
+    {
+        eSlots[i].enemy = enemies[i];
+        eSlots[i].slot.innerHTML = eSlots[i].enemy.name;
+    }
+}
+
+/*
 //test interval
 setInterval(function(){
     eSlots[0].enemy = rat;
     eSlots[0].slot.innerHTML = eSlots[0].enemy.name;
+    eSlots[1].enemy = blackrat;
+    eSlots[1].slot.innerHTML = eSlots[1].enemy.name;
 },1);
-
-
+*/
 
 
 

@@ -9,6 +9,8 @@ let bonusHP = 0,
     bonusDEF = 0,
     bonusDMG = 0;
 
+
+
 let bonusStats = [bonusHP, bonusMP, bonusEP, bonusSTR, bonusAGL, bonusINT, bonusDEF, bonusDMG];
 
 function eqSlotStats(bonusHP, bonusMP, bonusEP, bonusSTR, bonusAGL, bonusINT, bonusDEF, bonusDMG)

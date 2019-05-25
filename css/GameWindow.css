@@ -147,6 +147,11 @@
     top: 50%;
 }
 
+.area:hover
+{
+    border: 2px solid red;
+}
+
 #playerArea
 {
     position: relative;

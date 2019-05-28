@@ -82,6 +82,9 @@ function eqStatsUpdate()
     }
 }
 
+let inDungeon = false;
+
+
 function fullFillStats()
 {
     if(!inDungeon)

@@ -19,5 +19,7 @@ function statsWindowUpdate()
     document.querySelector("#STRstat").innerHTML = "Strength: " + strength;
     document.querySelector("#AGLstat").innerHTML = "Agility: " + agility;
     document.querySelector("#INTstat").innerHTML = "Intellect: " + intellect;
+
+    document.querySelector("#DMGstat").innerHTML = "Attack: " + DMG;
 }
 

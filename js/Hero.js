@@ -21,12 +21,15 @@ let baseSTR = 10;
 let baseAGL = 10;
 let baseINT = 10;
 
+let DMG = 10;
+
 function updateHero()
 {
-    maxHP = baseHP + bonusStats[0];
-    maxMP = baseMP + bonusStats[1];
-    maxEP = baseEP + bonusStats[2];
-    strength = baseSTR + bonusStats[3];
-    agility = baseAGL + bonusStats[4];
-    intellect = baseINT + bonusStats[5];
+    maxHP = Math.round( baseHP + bonusStats[0]);
+    maxMP = Math.round(baseMP + bonusStats[1]);
+    maxEP = Math.round(baseEP + bonusStats[2]);
+    strength = Math.round(baseSTR + bonusStats[3]);
+    agility = Math.round(baseAGL + bonusStats[4]);
+    intellect = Math.round(baseINT + bonusStats[5]);
+    DMG = Math.round(strength/2 + agility/3 + bonusStats[7]);
 };

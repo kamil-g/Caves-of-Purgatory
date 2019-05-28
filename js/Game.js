@@ -1,5 +1,3 @@
-let inDungeon = false;
-
 document.querySelector("#startGame").addEventListener("click", function(){
     startGame();
 });
@@ -100,29 +98,35 @@ for(let i = 0; i <= 3; i++){
     eSlots.push(new enemySlot(eFields[i], null));
 } 
 
+let randomEnemy = 0;
+
 function spawnEnemy(qty)
 {
     for (let i = 0; i <= qty; i++)
     {
-        eSlots[i].enemy = enemies[i];
+        randomEnemy = Math.floor(Math.random() * enemies.length);
+        
+        eSlots[i].enemy = enemies[randomEnemy];
         eSlots[i].slot.innerHTML = eSlots[i].enemy.name;
     }
 }
 
-/*
-//test interval
+function despawnEnemy(eSlots)
+{
+    eSlots.enemy = null;
+    eSlots.slot.innerHTML = "";
+}
+
 setInterval(function(){
-    eSlots[0].enemy = rat;
-    eSlots[0].slot.innerHTML = eSlots[0].enemy.name;
-    eSlots[1].enemy = blackrat;
-    eSlots[1].slot.innerHTML = eSlots[1].enemy.name;
+    roomCleared();
 },1);
-*/
 
-
-
-
-
+function roomCleared()
+{
+    if(inDungeon && eSlots[0].enemy == null && eSlots[1].enemy == null && eSlots[2].enemy == null && eSlots[3].enemy == null)
+        document.querySelector("#fightCave").style.display = "none";
+        startGame();
+}
 
 
 
